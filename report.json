@@ -1,0 +1,129 @@
+{
+  "config": {
+    "configFile": "E:\\PlaywrightDemo\\playwright.config.ts",
+    "rootDir": "E:/PlaywrightDemo/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "E:/PlaywrightDemo/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "E:/PlaywrightDemo/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "testisolation.spec.ts",
+      "file": "testisolation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "First-Test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 522,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://ciitstdudent.com/\nCall log:\n\u001b[2m  - navigating to \"https://ciitstdudent.com/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://ciitstdudent.com/\nCall log:\n\u001b[2m  - navigating to \"https://ciitstdudent.com/\", waiting until \"load\"\u001b[22m\n\n    at E:\\PlaywrightDemo\\tests\\testisolation.spec.ts:8:23",
+                    "location": {
+                      "file": "E:\\PlaywrightDemo\\tests\\testisolation.spec.ts",
+                      "column": 23,
+                      "line": 8
+                    },
+                    "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[36mconst\u001b[39m studentpage\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m studentcontext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m     \u001b[36mconst\u001b[39m institutepage\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m institutecontext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m studentpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ciitstdudent.com/\"\u001b[39m)\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m institutepage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ciitinstitute.com/\"\u001b[39m)\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m studentpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m institutepage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "E:\\PlaywrightDemo\\tests\\testisolation.spec.ts",
+                        "column": 23,
+                        "line": 8
+                      },
+                      "message": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://ciitstdudent.com/\nCall log:\n\u001b[2m  - navigating to \"https://ciitstdudent.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[36mconst\u001b[39m studentpage\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m studentcontext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m     \u001b[36mconst\u001b[39m institutepage\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m institutecontext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m studentpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ciitstdudent.com/\"\u001b[39m)\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m institutepage\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://ciitinstitute.com/\"\u001b[39m)\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m studentpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m institutepage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at E:\\PlaywrightDemo\\tests\\testisolation.spec.ts:8:23\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-07T05:36:02.186Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "E:\\PlaywrightDemo\\tests\\testisolation.spec.ts",
+                    "column": 23,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "85442ff9bb301ed8e818-d6991bf78447cb8655d0",
+          "file": "testisolation.spec.ts",
+          "line": 2,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-12-07T05:36:01.108Z",
+    "duration": 2968.34,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
